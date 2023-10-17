@@ -7,7 +7,7 @@ td, th {
 }
 
 th {
-    text-align: left;
+    text-align: center;
 }
 
 td {
@@ -33,6 +33,9 @@ table.job-listing td:first-child {
     font-weight: bold;
 }
 
+table.job-listing th {
+    text-align: left;
+}
 table.job-listing td:last-child {
     width: 80%;
 }
