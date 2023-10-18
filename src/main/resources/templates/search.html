@@ -44,23 +44,23 @@
         </tr>
         <tr >
             <th th:text="Name"></th>
-            <td th:text="${job.name}"></td>
+            <td th:text="${#strings.capitalizeWords(job.name)}"></td>
         </tr>
         <tr >
             <th th:text="Employer"></th>
-            <td th:text="${job.employer}"></td>
+            <td th:text="${#strings.toUpperCase(job.employer)}"></td>
         </tr>
         <tr >
             <th th:text="Location"></th>
-            <td th:text="${job.location}"></td>
+            <td th:text="${#strings.capitalizeWords(job.location)}"></td>
         </tr>
         <tr >
             <th>Position Type</th>
-            <td th:text="${job.positionType}"></td>
+            <td th:text="${#strings.capitalizeWords(job.positionType)}"></td>
         </tr>
         <tr >
             <th th:text="Skill"></th>
-            <td th:text="${job.coreCompetency}"></td>
+            <td th:text="${#strings.capitalizeWords(job.coreCompetency)}"></td>
         </tr>
     </table>
 
