@@ -38,29 +38,30 @@
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
     <table class="job-listing" th:each="job : ${jobs}">
-        <tr >
-            <th th:text="ID"></th>
+        <tr>
+            <th>ID</th>
             <td th:text="${job.id}"></td>
         </tr>
-        <tr >
-            <th th:text="Name"></th>
+        <tr>
+            <th>Name</th>
             <td th:text="${#strings.capitalizeWords(job.name)}"></td>
         </tr>
         <tr >
-            <th th:text="Employer"></th>
-            <td th:text="${#strings.toUpperCase(job.employer)}"></td>
+            <th>Employer</th>
+            <td><a th:href="@{/list/jobs(column=employer,value=${#strings.toUpperCase(job.employer)})}" th:text="${#strings.toUpperCase(job.employer)}"></a></td>
         </tr>
-        <tr >
-            <th th:text="Location"></th>
-            <td th:text="${#strings.capitalizeWords(job.location)}"></td>
+        <tr>
+            <th th:text>Location</th>
+            <td><a th:href="@{/list/jobs(column=location,value=${#strings.capitalizeWords(job.location)})}" th:text="${#strings.capitalizeWords(job.location)}"></a></td>
         </tr>
-        <tr >
+        <tr>
             <th>Position Type</th>
-            <td th:text="${#strings.capitalizeWords(job.positionType)}"></td>
+            <td><a th:href="@{/list/jobs(column=positionType,value=${#strings.capitalizeWords(job.positionType)})}" th:text="${#strings.capitalizeWords(job.positionType)}"></a></td>
         </tr>
-        <tr >
-            <th th:text="Skill"></th>
-            <td th:text="${#strings.capitalizeWords(job.coreCompetency)}"></td>
+        <tr>
+            <th>Skill</th>
+            <td><a th:href="@{/list/jobs(column=coreCompetency,value=${#strings.capitalizeWords(job.coreCompetency)})}" th:text="${#strings.capitalizeWords(job.coreCompetency)}"></a></td>
+
         </tr>
     </table>
 
